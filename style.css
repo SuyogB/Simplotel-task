@@ -1,0 +1,230 @@
+:root {
+  --pink: #e84393;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2 linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  text-transform: capitalize;
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 6rem;
+  color: #000;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header .navbar a:hover {
+  color: var(--pink);
+}
+
+header .icons a {
+  font-size: 2rem;
+  color: #333;
+  padding: 0 1rem;
+}
+
+header #toggler {
+  display: none;
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(images/img1.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  max-width: 35rem;
+  padding: 2rem;
+  background-color: #cc6f6598;
+}
+
+.home .content h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.orderNow {
+    background: #f7ff00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #db36a4, #f7ff00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #db36a4, #f7ff00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.orderNow .heading-container {
+  text-align: center;
+}
+
+.heading {
+  font-family: "TT Norms", sans-serif;
+  color: #fff;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.orderNow .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+  
+}
+
+.orderNow .card-container .card {
+  flex: 1 1 30rem;
+}
+
+.orderNow .card-container .card .card-border {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0px 80px;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: #ffffff;
+  width: 250px;
+  height: 300px;
+}
+
+.orderNow .card-container .card .image {
+  position: relative;
+  overflow: hidden;
+}
+
+.orderNow .card-container .card .image img {
+  padding-top: 10px;
+  height: 20rem;
+  border-top-right-radius: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.orderNow .card-container .card .card-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-heading {
+  text-transform: uppercase;
+  font-family: "TT Norms", sans-serif;
+  color: #000;
+  font-size: 15px;
+}
+
+.orderNow .button-container {
+  height: 200px;
+  position: relative;
+}
+
+.orderNow .button-container .button {
+  background-color: #ffffff3d; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 40px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1266px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1119px) {
+  header .fa-bars {
+    display: block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #eee;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header #toggler:checked ~ .navbar {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
